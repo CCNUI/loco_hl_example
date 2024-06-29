@@ -1,6 +1,39 @@
-# Gait Def for moonwalk
+# moonwalk步态定义
 
-# 1
+# 第1部分
+[[section]]
+contact  = [1, 1, 1, 1]  # 各腿接触地面情况，1表示接触，0表示不接触
+duration = 8  # 持续时间
+
+[[section]]
+contact  = [0, 0, 0, 0]
+duration = 2
+
+[[section]]
+contact  = [0, 1, 1, 0]
+duration = 6
+
+[[section]]
+contact  = [0, 0, 0, 0]
+duration = 2
+
+[[section]]
+contact  = [1, 1, 1, 1]
+duration = 8
+
+[[section]]
+contact  = [0, 0, 0, 0]
+duration = 2
+
+[[section]]
+contact  = [1, 0, 0, 1]
+duration = 6
+
+[[section]]
+contact  = [0, 0, 0, 0]
+duration = 2
+
+# 第2部分
 [[section]]
 contact  = [1, 1, 1, 1]
 duration = 8
@@ -33,7 +66,7 @@ duration = 6
 contact  = [0, 0, 0, 0]
 duration = 2
 
-# 2
+# 第3部分
 [[section]]
 contact  = [1, 1, 1, 1]
 duration = 8
@@ -66,7 +99,7 @@ duration = 6
 contact  = [0, 0, 0, 0]
 duration = 2
 
-# 3
+# 第4部分
 [[section]]
 contact  = [1, 1, 1, 1]
 duration = 8
@@ -99,40 +132,7 @@ duration = 6
 contact  = [0, 0, 0, 0]
 duration = 2
 
-# 4
-[[section]]
-contact  = [1, 1, 1, 1]
-duration = 8
-
-[[section]]
-contact  = [0, 0, 0, 0]
-duration = 2
-
-[[section]]
-contact  = [0, 1, 1, 0]
-duration = 6
-
-[[section]]
-contact  = [0, 0, 0, 0]
-duration = 2
-
-[[section]]
-contact  = [1, 1, 1, 1]
-duration = 8
-
-[[section]]
-contact  = [0, 0, 0, 0]
-duration = 2
-
-[[section]]
-contact  = [1, 0, 0, 1]
-duration = 6
-
-[[section]]
-contact  = [0, 0, 0, 0]
-duration = 2
-
-# 5
+# 第5部分
 [[section]]
 contact  = [1, 1, 1, 1]
 duration = 8

@@ -1,5 +1,5 @@
 '''
-This demo show the communication interface of MR813 motion control board based on Lcm
+该演示展示了基于Lcm的MR813运动控制板的通信接口
 - robot_control_cmd_lcmt.py
 - cyberdog2_ctrl.toml
 '''
@@ -17,20 +17,20 @@ def findAllFile(base):
             yield f
 
 def main():
-    base='./'
-    num=0
-    filelist=[]
+    base = './'
+    num = 0
+    filelist = []
     for i in findAllFile(base):
         filelist.append(i)
-        print(str(num)+","+str(filelist[num]))
-        num=num+1
-    print('Input a toml ctrl file number:')
-    numInput=int(input())
+        print(f"{num},{filelist[num]}")
+        num += 1
+    print('输入一个TOML控制文件编号:')
+    numInput = int(input())
 
-    lc=lcm.LCM("udpm://239.255.76.67:7671?ttl=255")
-    msg=robot_control_cmd_lcmt()
-    file = os.path.join(base,filelist[numInput])
-    print("Load file=%s\n" % file)
+    lc = lcm.LCM("udpm://239.255.76.67:7671?ttl=255")
+    msg = robot_control_cmd_lcmt()
+    file = os.path.join(base, filelist[numInput])
+    print(f"加载文件={file}\n")
     try:
         steps = toml.load(file)
         for step in steps['step']:
@@ -45,27 +45,26 @@ def main():
                 msg.rpy_des[i] = step['rpy_des'][i]
                 msg.pos_des[i] = step['pos_des'][i]
                 msg.acc_des[i] = step['acc_des'][i]
-                msg.acc_des[i+3] = step['acc_des'][i+3]
+                msg.acc_des[i + 3] = step['acc_des'][i + 3]
                 msg.foot_pose[i] = step['foot_pose'][i]
                 msg.ctrl_point[i] = step['ctrl_point'][i]
             for i in range(2):
                 msg.step_height[i] = step['step_height'][i]
 
-            lc.publish("robot_control_cmd",msg.encode())
-            print('robot_control_cmd lcm publish mode :',msg.mode , "gait_id :",msg.gait_id , "msg.duration=" , msg.duration)
-            time.sleep( 0.1 )
-        for i in range(300): #60s Heat beat, maintain the heartbeat when life count is not updated
-            lc.publish("robot_control_cmd",msg.encode())
-            time.sleep( 0.2 )
+            lc.publish("robot_control_cmd", msg.encode())
+            print(f'robot_control_cmd LCM发布模式: {msg.mode} 步态ID: {msg.gait_id} 持续时间: {msg.duration}')
+            time.sleep(0.1)
+        for _ in range(300):  # 60秒心跳，用于保持心跳以防止life count未更新
+            lc.publish("robot_control_cmd", msg.encode())
+            time.sleep(0.2)
     except KeyboardInterrupt:
-        msg.mode = 7 #PureDamper before KeyboardInterrupt:
+        msg.mode = 7  # 纯阻尼模式
         msg.gait_id = 0
         msg.duration = 0
         msg.life_count += 1
-        lc.publish("robot_control_cmd",msg.encode())
+        lc.publish("robot_control_cmd", msg.encode())
         pass
     sys.exit()
 
-# Main function
 if __name__ == '__main__':
     main()

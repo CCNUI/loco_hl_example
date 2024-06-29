@@ -1,18 +1,18 @@
-# Gait Params for moonwalk
+# moonwalk步态参数
 
-# 1
+# 第1部分
 [[step]]
-type            = "usergait"
-body_vel_des    = [0.0, 0.0, 0.0]
-body_pos_des    = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-landing_pos_des = [0.065, 0.00, 0.0,  0.00, -0.00, 0.0,  0.00, 0.00, 0.0,  0.065, 0.00, 0.0]
-step_height     = [0.05, 0.01, 0.01, 0.05]
-weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]
-use_mpc_traj    = 0
-mu              = 0.40
-landing_gain    = 1.0 
-gait_id         = 110
-duration        = 300
+type            = "usergait"  # 步态类型，用户自定义步态
+body_vel_des    = [0.0, 0.0, 0.0]  # 期望的身体速度
+body_pos_des    = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]  # 期望的身体位置和姿态
+landing_pos_des = [0.065, 0.00, 0.0,  0.00, -0.00, 0.0,  0.00, 0.00, 0.0,  0.065, 0.00, 0.0]  # 着陆位置
+step_height     = [0.05, 0.01, 0.01, 0.05]  # 步态高度
+weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]  # 权重
+use_mpc_traj    = 0  # 是否使用MPC轨迹
+mu              = 0.40  # 摩擦系数
+landing_gain    = 1.0  # 着陆增益
+gait_id         = 110  # 步态ID
+duration        = 300  # 持续时间
 
 [[step]]
 type            = "usergait"
@@ -23,7 +23,7 @@ step_height     = [0.05, 0.01, 0.01, 0.05]
 weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]
 use_mpc_traj    = 0
 mu              = 0.40
-landing_gain    = 1.0 
+landing_gain    = 1.0
 gait_id         = 110
 duration        = 240
 
@@ -36,7 +36,7 @@ step_height     = [0.01, 0.05, 0.05, 0.01]
 weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]
 use_mpc_traj    = 0
 mu              = 0.40
-landing_gain    = 1.0 
+landing_gain    = 1.0
 gait_id         = 110
 duration        = 300
 
@@ -49,11 +49,11 @@ step_height     = [0.01, 0.05, 0.05, 0.01]
 weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]
 use_mpc_traj    = 0
 mu              = 0.40
-landing_gain    = 1.0 
+landing_gain    = 1.0
 gait_id         = 110
 duration        = 240
 
-# 2
+# 第2部分
 [[step]]
 type            = "usergait"
 body_vel_des    = [0.0, 0.0, 0.0]
@@ -63,7 +63,7 @@ step_height     = [0.05, 0.01, 0.01, 0.05]
 weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]
 use_mpc_traj    = 0
 mu              = 0.40
-landing_gain    = 1.0 
+landing_gain    = 1.0
 gait_id         = 110
 duration        = 300
 
@@ -76,7 +76,7 @@ step_height     = [0.05, 0.01, 0.01, 0.05]
 weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]
 use_mpc_traj    = 0
 mu              = 0.40
-landing_gain    = 1.0 
+landing_gain    = 1.0
 gait_id         = 110
 duration        = 240
 
@@ -89,7 +89,7 @@ step_height     = [0.01, 0.05, 0.05, 0.01]
 weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]
 use_mpc_traj    = 0
 mu              = 0.40
-landing_gain    = 1.0 
+landing_gain    = 1.0
 gait_id         = 110
 duration        = 300
 
@@ -102,11 +102,11 @@ step_height     = [0.01, 0.05, 0.05, 0.01]
 weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]
 use_mpc_traj    = 0
 mu              = 0.40
-landing_gain    = 1.0 
+landing_gain    = 1.0
 gait_id         = 110
 duration        = 240
 
-# 3
+# 第3部分
 [[step]]
 type            = "usergait"
 body_vel_des    = [0.0, 0.0, 0.0]
@@ -116,7 +116,7 @@ step_height     = [0.05, 0.01, 0.01, 0.05]
 weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]
 use_mpc_traj    = 0
 mu              = 0.40
-landing_gain    = 1.0 
+landing_gain    = 1.0
 gait_id         = 110
 duration        = 300
 
@@ -129,7 +129,7 @@ step_height     = [0.05, 0.01, 0.01, 0.05]
 weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]
 use_mpc_traj    = 0
 mu              = 0.40
-landing_gain    = 1.0 
+landing_gain    = 1.0
 gait_id         = 110
 duration        = 240
 
@@ -142,7 +142,7 @@ step_height     = [0.01, 0.05, 0.05, 0.01]
 weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]
 use_mpc_traj    = 0
 mu              = 0.40
-landing_gain    = 1.0 
+landing_gain    = 1.0
 gait_id         = 110
 duration        = 300
 
@@ -155,11 +155,11 @@ step_height     = [0.01, 0.05, 0.05, 0.01]
 weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]
 use_mpc_traj    = 0
 mu              = 0.40
-landing_gain    = 1.0 
+landing_gain    = 1.0
 gait_id         = 110
 duration        = 240
 
-# 4
+# 第4部分
 [[step]]
 type            = "usergait"
 body_vel_des    = [0.0, 0.0, 0.0]
@@ -169,7 +169,7 @@ step_height     = [0.05, 0.01, 0.01, 0.05]
 weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]
 use_mpc_traj    = 0
 mu              = 0.40
-landing_gain    = 1.0 
+landing_gain    = 1.0
 gait_id         = 110
 duration        = 300
 
@@ -182,7 +182,7 @@ step_height     = [0.05, 0.01, 0.01, 0.05]
 weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]
 use_mpc_traj    = 0
 mu              = 0.40
-landing_gain    = 1.0 
+landing_gain    = 1.0
 gait_id         = 110
 duration        = 240
 
@@ -190,12 +190,12 @@ duration        = 240
 type            = "usergait"
 body_vel_des    = [0.0, 0.0, 0.0]
 body_pos_des    = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-landing_pos_des = [0.00, 0.00, 0.0,  0.00, -0.00, 0.0,  0.00, 0.00, 0.0,  0.00, 0.00, 0.0]
+landing_pos_des = [0.00, 0.00, 0.0,  0.065, -0.00, 0.0,  0.065, 0.00, 0.0,  0.00, 0.00, 0.0]
 step_height     = [0.01, 0.05, 0.05, 0.01]
 weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]
 use_mpc_traj    = 0
 mu              = 0.40
-landing_gain    = 1.0 
+landing_gain    = 1.0
 gait_id         = 110
 duration        = 300
 
@@ -203,13 +203,69 @@ duration        = 300
 type            = "usergait"
 body_vel_des    = [0.0, 0.0, 0.0]
 body_pos_des    = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-landing_pos_des = [-0.00, 0.00, 0.0,  0.00, -0.00, 0.0,  0.00, 0.00, 0.0,  -0.00, 0.00, 0.0]
+landing_pos_des = [-0.065, 0.00, 0.0,  0.065, -0.00, 0.0,  0.065, 0.00, 0.0,  -0.065, 0.00, 0.0]
 step_height     = [0.01, 0.05, 0.05, 0.01]
 weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]
 use_mpc_traj    = 0
 mu              = 0.40
-landing_gain    = 1.0 
+landing_gain    = 1.0
 gait_id         = 110
 duration        = 240
 
-# End of moonwalk #
+# 第5部分
+[[step]]
+type            = "usergait"
+body_vel_des    = [0.0, 0.0, 0.0]
+body_pos_des    = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+landing_pos_des = [0.065, 0.00, 0.0,  0.00, -0.00, 0.0,  0.00, 0.00, 0.0,  0.065, 0.00, 0.0]
+step_height     = [0.05, 0.01, 0.01, 0.05]
+weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]
+use_mpc_traj    = 0
+mu              = 0.40
+landing_gain    = 1.0
+gait_id         = 110
+duration        = 300
+
+[[step]]
+type            = "usergait"
+body_vel_des    = [0.0, 0.0, 0.0]
+body_pos_des    = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+landing_pos_des = [0.065, 0.00, 0.0,  -0.065, -0.00, 0.0,  -0.065, 0.00, 0.0,  0.065, 0.00, 0.0]
+step_height     = [0.05, 0.01, 0.01, 0.05]
+weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]
+use_mpc_traj    = 0
+mu              = 0.40
+landing_gain    = 1.0
+gait_id         = 110
+duration        = 240
+
+[[step]]
+type            = "usergait"
+body_vel_des    = [0.0, 0.0, 0.0]
+body_pos_des    = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+landing_pos_des = [0.00, 0.00, 0.0,  0.065, -0.00, 0.0,  0.065, 0.00, 0.0,  0.00, 0.00, 0.0]
+step_height     = [0.01, 0.05, 0.05, 0.01]
+weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]
+use_mpc_traj    = 0
+mu              = 0.40
+landing_gain    = 1.0
+gait_id         = 110
+duration        = 300
+
+[[step]]
+type            = "usergait"
+body_vel_des    = [0.0, 0.0, 0.0]
+body_pos_des    = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+landing_pos_des = [-0.065, 0.00, 0.0,  0.065, -0.00, 0.0,  0.065, 0.00, 0.0,  -0.065, 0.00, 0.0]
+step_height     = [0.01, 0.05, 0.05, 0.01]
+weight          = [10.0, 10.0, 10.0, 50.0, 50.0, 10.0]
+use_mpc_traj    = 0
+mu              = 0.40
+landing_gain    = 1.0
+gait_id         = 110
+duration        = 240
+
+# moonwalk结束
+
+
+
